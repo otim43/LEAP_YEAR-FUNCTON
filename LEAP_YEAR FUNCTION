@@ -1,0 +1,16 @@
+#include <iostream>
+
+bool is_leap_year(unsigned int Y) {
+  if (Y % 100 == 0) { // century year
+    return Y % 400 == 0;
+  } else {
+    return Y % 4 == 0;
+  }
+}
+
+int main() {
+  std::cout << std::boolalpha;
+  std::cout << "Is 2024 a leap year? " << is_leap_year(2024) << std::endl; // true
+  std::cout << "Is 1900 a leap year? " << is_leap_year(1900) << std::endl; // false
+  return 0;
+}
